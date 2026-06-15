@@ -22,7 +22,7 @@ int main(){
         {0, 0, 0, 0}
     };
 
-    sumar_matrices(matriz1, matriz2, matriz3, 16);
+    sumar_matrices((int *)matriz1,(int *) matriz2,(int *) matriz3, 16);
     
     for(int i = 0; i < 4; i++){
         for (int j = 0; j < 4; j++){
