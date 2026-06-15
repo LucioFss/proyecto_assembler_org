@@ -7,15 +7,18 @@ _sumar_matrices:
     
     mov esi, [ebp+8] ;Direccion de el primer elemento de la primera matriz
     mov edx, [ebp+12] ;Direccion de el primer elemento de la segunda matriz
+    dec ecx
     mov edi, [ebp+16] ;direccion de el primer elemento de la matriz resultante
     mov ecx, [ebp+20] ;Tamaño total de las dos matrices
     
 bucle:
-    mov eax, [esi + ecx * 4] ; 
+    mov eax, [esi + ecx * 4] ;
     add eax, [edx + ecx * 4] ;Sumamos los elementos en la matriz a1 y a2
     mov [edi + ecx * 4], eax
     
-    loop bucle
+    dec ecx
+    cmp ecx, -1
+    jne bucle
     
     mov esp,ebp
     pop ebp
