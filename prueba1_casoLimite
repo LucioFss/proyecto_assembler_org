@@ -1,9 +1,0 @@
-;Prueba 1 de MultBA
-Load A aux1     ;Ingresamos el multiplicador en A que se encuentra en aux1
-Load B aux2     ;Ingresamos el multiplicando en B que se encuentra en aux2
-MultBA      ;Multiplicamos ambos valores(B*A)
-Out B       ;Imprimimos el resultado de la multiplicacion
-Stop        ;Termina el programa
-
-aux1: .data 2 127
-aux2: .data 2 -128
