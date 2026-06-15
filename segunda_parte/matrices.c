@@ -21,10 +21,9 @@ int main(){
         {0, 0, 0, 0},
         {0, 0, 0, 0}
     };
-    
-    
-    printf("Sobreviví al Assembler!\n");
 
+    sumar_matrices(matriz1, matriz2, matriz3, 16);
+    
     for(int i = 0; i < 4; i++){
         for (int j = 0; j < 4; j++){
             printf("%d ", matriz3[i][j]);
