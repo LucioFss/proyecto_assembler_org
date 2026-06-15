@@ -1,0 +1,8 @@
+;Usamos la instruccion en un programa que calcula el cuadrado de un número
+;ingresado por consola
+In A
+Save A aux
+Load B aux
+MultBA
+Out B
+aux: .data 2 2
