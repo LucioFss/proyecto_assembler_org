@@ -1,0 +1,20 @@
+El proceso para compilar este programa consta de 4 pasos (comandos) que e realizan en la terminal en el directorio donde se encuentra la segunda parte del proyecto. con estos 4 pasos buscamos convertir a los dos archivos, el assempbler y el C, a un formato mas universal, el tipo objeto (.o), con el fin de mendiante el compilador de C juntarlos, que se genere un ejecutable, para ejecutar el programa en C con la funcion en assembler.
+
+Los comandos deben de ejecutarse son los simbolos "<>".
+
+Los comandos para compilar el programa son:
+
+1.Compilacion del archivo C: <gcc -c matrices.c> :
+Este comando le indica al compilador de C, el gcc, que compile el archivo que posee el programa en C, generando un archivo identico pero en formato objeto. Por lo que el resultado generaria un archivo como "matrices.o".
+
+2.Compilacion del archivo Assembler x86: < nasm -f win32 sumar_matrices.asm -o sumar_matrices.o > : 
+Este comando se encarga de indicarle al ensamblador de SASM, el nasm, que compile el archivo ensamblador y lo convierta a codigo objeto con un formato que el sistema operativo windows entiende. El resultado de ejecutar este comando es crear un archivo "sumar_matrices.o"
+
+3. Linkear archivos objetos: < gcc -m32 -o programa_suma_matrices.exe matrices.o sumar_matrices.o asm_io.o > :
+Este comando se encarga de juntar nuestros programas en una arquitectura m32, es decir, de 32 bits, generando el condigo objeto, con el fin de formar un programa.exe. Básicamente lo que estamos haciendo es pedirle a gcc(compilador de C) que funcione como un linker para unir el archivo de C con el programa assembler que tiene la funcion que usa el programa C y ademas algunas con las funciones de assembler(asm_io-o), que podrian llegar a ser utilizadas. Finalmente al juntarse los archivos hemos generado un programa en una arquitectura de 32 bits de la forma "programa_sumar_matrices.exe".
+
+4. Ejecucion del programa: <.\programa_suma_matrices.exe >: 
+Utilizamos este comando para ejecutar el programa creado anteriormente.
+
+¡¡IMPORTANTE!!
+Es importante saber que todos estos comandos deben realizarse teniendo instalado el compilador de C de 32 bits, de lo contrario la compilacion fallara. 
