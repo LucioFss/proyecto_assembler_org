@@ -1,0 +1,11 @@
+;Prueba 4 de MULTBA,Multiplicamos 2 numeros cuyo resultado activa el flag OverFlow
+;Deberia devolver un numero positivo, pero el resultado es uno negativo por 
+;el desbordamiento,ya que el resultado no se puede representar en 16 bits
+Load A aux1
+Load B aux2
+MultBA
+Out B 
+Stop
+
+aux1: .data 2 200
+aux2: .data 2 250
